@@ -13,7 +13,8 @@ dropoff_longitude = st.number_input("Longitud de destino", value=-73.984365, for
 dropoff_latitude = st.number_input("Latitud de destino", value=40.769802, format="%.6f")
 passenger_count = st.number_input("Número de pasajeros", min_value=1, max_value=5, value=1)
 
-url = 'https://wagon-data-tpl-image-173219828681.europe-west1.run.app/predict'
+url = 'https://taxifare.lewagon.ai/predict'
+#url = 'https://wagon-data-tpl-image-173219828681.europe-west1.run.app/predict' #api propia comentada para no gastar en gcp
 
 try:
     pickup_datetime = datetime.strptime(pickup_datetime_str, "%Y-%m-%d %H:%M:%S")
